@@ -1,0 +1,68 @@
+# Panduan MkDocs (Bahasa Indonesia). Jalankan dari folder ini: docs/
+#   cd docs && pip install -r requirements-docs.txt && mkdocs serve
+# Output: docs/site/
+
+site_name: Dokumentasi dana-node (SDK DANA)
+site_description: Panduan integrasi Node.js selaras kode sumber
+site_author: dana-id
+
+repo_url: https://github.com/dana-id/dana-node
+edit_uri: edit/main/docs/guide/
+
+# Sesuaikan setelah GitHub Pages aktif:
+# site_url: https://dana-id.github.io/dana-node/
+
+docs_dir: guide
+
+theme:
+  name: material
+  language: id
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Mode gelap
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Mode terang
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.sections
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+nav:
+  - Beranda: index.md
+  - Memulai: memulai.md
+  - Konfigurasi & lingkungan: konfigurasi.md
+  - Payment Gateway: payment-gateway.md
+  - Widget: widget.md
+  - Disbursement: disbursement.md
+  - Merchant Management: merchant-management.md
+  - Webhook: webhook.md
+  - Referensi API (Markdown): referensi-api.md
+
+extra:
+  generator: false
